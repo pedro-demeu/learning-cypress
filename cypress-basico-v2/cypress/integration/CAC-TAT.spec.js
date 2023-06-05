@@ -24,7 +24,9 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .should('have.value', 'pdemeu@gmail.com');
 
     cy.get('#open-text-area')
-      .type('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Donec auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl.')
+      .type('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Donec auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl.', {
+        delay: 1
+      })
       .should('have.value', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Donec auctor, nisl sit amet aliquam luctus, nunc nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl.');
 
     cy.get('button[type="submit"]')
