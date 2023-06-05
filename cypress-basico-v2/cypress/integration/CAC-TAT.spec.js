@@ -48,4 +48,10 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     cy.get('span[class="error"]')
       .should('be.visible');
   });
+
+  it('campo telefone deve manter o valor vazio, caso digitado algum valor não númerico', function() {
+    cy.get('#phone')
+      .type('abc')
+      .should('have.value', '');
+  });
 })
