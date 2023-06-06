@@ -113,4 +113,27 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     .select('YouTube')
     .should('have.value', 'youtube');
   });
+
+  it('marca o tipo de atendimento "Feedback"' , function(){
+    cy.get('input[type="radio"][value="feedback"]')
+    .check()
+    .should('be.checked');
+  });
+
+  it('marca cada tipo de atendimento', function(){
+    cy.get('input[type="radio"]')
+      .should('have.length', 3)
+      .each(function (el) {
+          cy.wrap(el).check()
+      })
+  });
+
+  it('marca ambos checkboxes, depois desmarca o último', function(){
+    cy.get('input[type="checkbox"]')
+      .should('have.length', 2)
+      .check()
+      .last()
+      .uncheck()
+
+  });
 })
