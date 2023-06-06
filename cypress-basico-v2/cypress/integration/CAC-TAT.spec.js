@@ -136,4 +136,10 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       .uncheck()
 
   });
+
+  it('seleciona um arquivo da pasta fixtures', function(){
+    cy.get('#file-upload')
+    .selectFile('cypress/fixtures/example.json')
+    .should(($el) => expect($el[0].files[0].name).to.eq('example.json'))
+  });
 })
