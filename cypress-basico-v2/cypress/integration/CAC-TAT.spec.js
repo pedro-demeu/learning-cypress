@@ -102,5 +102,9 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
     cy.get('span[class="error"]')
       .should('be.visible');
+  });
+
+  it('envia o formuário com sucesso usando um comando customizado', function(){
+    cy.fillMandatoryFieldsAndSubmit();
   })
 })
