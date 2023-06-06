@@ -23,6 +23,10 @@ Before you begin, ensure that the following systems are installed on your comput
 #### `*` Legend
 *  GUI -> Graphic User Interface
   
-``yarn test`` - Execute cypress test without GUI
+``yarn test`` - Execute cypress test without GUI. (headless mode)
 
-``yarn cy:open`` - Execute cypress with GUI
+``yarn test:mobile`` - Execute cypress with mobile view port. (headless mode)
+
+``yarn cy:open`` - Execute cypress with GUI.
+
+``yarn cy:open:mobile`` - Execute cypress with GUI and with mobile view port.
