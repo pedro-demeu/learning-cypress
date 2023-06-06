@@ -5,7 +5,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: GoToProject
-        run: cd ${{ github.workspace.cypress-basico-v2 }}
+        run: cd ${{ github.workspace }}
+      - name: List files
+        run: ls
+
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
