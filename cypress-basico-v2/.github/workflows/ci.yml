@@ -4,11 +4,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
-      - name: GoToProject
-        run: cd "/home/runner/work/learning-cypress/cypress-basico-v2/"
-      - name: List files
-        run: ls
-
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
