@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: GoToProject
-        run: cd ${{ github.workspace }}
+        run: cd "/home/runner/work/learning-cypress/learning-cypress/cypress-basico-v2/"
       - name: List files
         run: ls
 
