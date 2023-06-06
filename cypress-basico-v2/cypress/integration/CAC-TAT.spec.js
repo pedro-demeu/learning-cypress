@@ -68,4 +68,31 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     cy.get('span[class="error"]')
       .should('be.visible');
   });
+
+  it('preenche e limpa os campos nome, sobrenome, email e telefone', function(){
+    cy.get('#firstName')
+      .type('Fulano')
+      .should('have.value', 'Fulano')
+      .clear()
+      .should('have.value', '');
+
+    cy.get('#lastName')
+      .type('de Tal')
+      .should('have.value', 'de Tal')
+      .clear()
+      .should('have.value', '');
+    
+    cy.get('#email')
+      .type('pdemeu@gmail.com')
+      .should('have.value', 'pdemeu@gmail.com')
+      .clear()
+      .should('have.value', '');
+
+    cy.get('#phone')
+      .type('11999999999')
+      .should('have.value', '11999999999')
+      .clear()
+      .should('have.value', '');
+    
+  })
 })
